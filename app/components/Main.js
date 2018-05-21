@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { AppRegistry, Text, View, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
+import SignUp from './SignUp';
+import { StackNavigator } from 'react-navigation';
 export default class Main extends Component {
+
+    onPressSignUp(){
+       alert('test')
+      //this.props.navigation.navigate('SignUp');
+    }
 
     render() {
         return (
@@ -20,7 +27,7 @@ export default class Main extends Component {
                     <TouchableOpacity style={styles.footerButtons}>
                         <View><Text style={styles.textFooter}>login</Text></View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.footerButtons}>
+                    <TouchableOpacity style={styles.footerButtons} onPress={this.onPressSignUp}>
                         <View><Text style={styles.textFooter}>SignUp</Text></View>
                     </TouchableOpacity>
                 </View>
